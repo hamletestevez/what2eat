@@ -1,66 +1,48 @@
 angular.module('app.controllers', [])
-  
-.controller('what2EatCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
 
+  .controller('what2EatCtrl', function ($scope, $stateParams, $timeout) {
 
-}])
-   
-.controller('myLocationsCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+    $scope.elements = animated.data.elements;
 
+    animated.createWheel();
+    animated.animateWheel();
+    
+    
+    // END of what2EatCtrl
 
-}])
-   
-.controller('historyCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+  })
 
+  .controller('myLocationsCtrl', function ($scope, $stateParams) {
 
-}])
-   
-.controller('menuCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+    // END of myLocationsCtrl
+  })
 
+  .controller('historyCtrl', function ($scope, $stateParams) {
 
-}])
-   
-.controller('settingsCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+    // END of historyCtrl
+  })
 
+  .controller('menuCtrl', function ($scope, $stateParams) {
 
-}])
-   
-.controller('accountCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+    // END of menuCtrl
+  })
 
+  .controller('settingsCtrl', function ($scope, $stateParams) {
 
-}])
-   
-.controller('loginCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+    // END of settingsCtrl
+  })
 
+  .controller('accountCtrl', function ($scope, $stateParams) {
 
-}])
-   
-.controller('signinCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
+    // END of accountCtrl
+  })
 
+  .controller('loginCtrl', function ($scope, $stateParams) {
 
-}])
- 
+    // END of loginCtrl
+  })
+
+  .controller('signinCtrl', function ($scope, $stateParams) {
+
+    // END of signinCtrl
+  })
