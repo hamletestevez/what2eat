@@ -35,38 +35,81 @@ ion-list.manual-list-fullwidth div.list>.item,
 
 
 // what 2 eat css START
-#scrollBox{
- 
+#scrollBox {
+
   height: 500px;
-  
-//   border-width: 20px;
-//   border-style: solid;
-border: 1px solid #fff;
-box-shadow: inset 0px 0px 20px 20px #fff;
-  overflow-y: scroll;
-  .scrollWindow{
-    text-align: center;
-    z-index: -2;
-    position: relative;
-    height: 80px;
-    
-    .elements{
-      display: block;
-      margin: 30px 0px 30px;
-      img{
-        width: 100px;
-      }
+
+  border: 1px solid #fff;
+  box-shadow: inset 0px 0px 20px 20px #fff;
+
+  position: relative;
+
+
+  .elements {
+    display: block;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+
+    img {
+      width: 100px;
     }
   }
+
+  // #elements {
+
+  //   &_burger {
+  //     top: 50%;
+  //   }
+  //   &_burrito{
+  //     top: 30%;
+  //   }
+  //   &_chiken{
+  //     top: 75%;
+  //   }
+  //   &_meat{
+  //     top: 10%;
+  //   }
+  //   &_pasta{
+  //     top: 95%;
+  //   }
+
+  // }
+
+
+
+  #elements {
+
+    &_one {
+      top: 50%;
+    }
+    &_two{
+      top: 30%;
+    }
+    &_three{
+      top: 75%;
+    }
+    &_four{
+      top: 10%;
+    }
+    &_five{
+      top: 95%;
+    }
+
+  }
+
 }
 
-#bottomElement{
+
+#bottomElement {
   width: 10px;
   background-color: red;
   height: 10px;
 }
 
-.pointerElement{
+.pointerElement {
   position: absolute;
   top: 52%;
   left: 20%;

@@ -2,12 +2,13 @@ angular.module('app.controllers', [])
 
   .controller('what2EatCtrl', function ($scope, $stateParams, $timeout) {
 
-    $scope.elements = animated.data.elements;
+    // $scope.elements = animated.data.elements;
 
     animated.createWheel();
-    animated.animateWheel();
+    // animated.animateWheel();
     
     
+
     // END of what2EatCtrl
 
   })

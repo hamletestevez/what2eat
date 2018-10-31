@@ -7,7 +7,6 @@ $(document).ready(function () { //<<====== wont work without this
 });
 
 
-
 var animated = {
 
   data: {
@@ -64,34 +63,60 @@ var animated = {
     scrolFraction: 0
   },
 
-  animateWheel: () => {
-    $('#scrollBox').animate({
-        scrollTop: 1000
-      }, 1000, 'linear', () => {
-        animated.data.scrollLeanght = $('#scrollBox').scrollTop();
-        animated.data.scrolFraction = $('#scrollBox').scrollTop() / 12;
-        $('#scrollBox').animate({
-            scrollTop: animated.data.scrollLeanght / 2
+  // animateWheel: () => {
+  //   $('#scrollBox').animate({
+  //       scrollTop: 1000
+  //     }, 1000, 'linear', () => {
+  //       animated.data.scrollLeanght = $('#scrollBox').scrollTop();
+  //       animated.data.scrolFraction = $('#scrollBox').scrollTop() / 12;
+  //       $('#scrollBox').animate({
+  //           scrollTop: animated.data.scrollLeanght / 2
 
-          }, 2000, 'linear', () => {
-           
-          })
-      })
- 
-  },
+  //         }, 2000, 'linear', () => {
+
+  //         })
+  //     })
+
+  // },
 
   createWheel: () => {
-    $('#scrollBox').scroll(function () {
-       var scroller = $('#scrollBox').scrollTop();
-
-      if(scroller > animated.data.scrollLeanght / 2){
-          console.log('going up');
-      }else if(scroller === animated.data.scrollLeanght / 2){
-        console.log('going down');
-        // $('.scrollWindow a').first().remove();
+    Draggable.create("#elements_one", {
+      type: 'y',
+      throwProps: true,
+      bounds: $('#scrollBox'),
+      edgeResistance:0.65,
+      onClick:function() {
+        console.log("clicked");
+      },
+      onDrag: (dis)=>{
+        console.log(dis.path[1].id);
+        console.log(Draggable.get("#elements_one").y);
+      }, 
+      onDragStart:function() {
+        console.log("drag start");
+        console.log(this.getDirection('start'));
+       
+      },
+      onDragEnd:function() {
+        console.log("drag ended");
+        console.log(this.endY);
+        animated.createElement();
+       
       }
+    });
 
-      console.log();
-    })
+
+
+  },
+  
+  createElement:()=>{
+    var t = $("<div id='elements_pizza' class='elements'><img src='../img/elements/pizza.svg' /></div>");
+
+    $('#scrollBox').append(t);
+    $('#elements_pasta').remove();
+  },
+
+  moveElements: (distance)=>{
+  TweenMax.to("#elements_one, #elements_two, #elements_three, #elements_four, #elements_five", 0, {y: distance})
   }
 }

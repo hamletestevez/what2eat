@@ -30,17 +30,25 @@ ion-list.manual-list-fullwidth div.list > .item,
   height: 500px;
   border: 1px solid #fff;
   box-shadow: inset 0px 0px 20px 20px #fff;
-  overflow-y: scroll; }
-  #scrollBox .scrollWindow {
-    text-align: center;
-    z-index: -2;
-    position: relative;
-    height: 80px; }
-    #scrollBox .scrollWindow .elements {
-      display: block;
-      margin: 30px 0px 30px; }
-      #scrollBox .scrollWindow .elements img {
-        width: 100px; }
+  position: relative; }
+  #scrollBox .elements {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px; }
+    #scrollBox .elements img {
+      width: 100px; }
+  #scrollBox #elements_one {
+    top: 50%; }
+  #scrollBox #elements_two {
+    top: 30%; }
+  #scrollBox #elements_three {
+    top: 75%; }
+  #scrollBox #elements_four {
+    top: 10%; }
+  #scrollBox #elements_five {
+    top: 95%; }
 
 #bottomElement {
   width: 10px;
